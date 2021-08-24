@@ -1,0 +1,70 @@
+.collapsible {
+  background-color: white;
+  color: #777;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  /*font-size: 15px;*/
+  
+  color: #004997;
+  border-bottom: 2px solid #004997;
+  margin: 15px 0px 5px 0px;
+  font-variant: small-caps;
+  font-size: 24px;
+}
+
+.active, .collapsible:hover {
+  background-color: #EEE;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #EEE;
+}
+
+.talkitem {
+  padding: 10px 0px 0px 0px;
+  font-weight: bold;
+}
+
+.talktitle {
+  padding: 0px 0px 10px 0px;
+}
+
+.newsdiv {
+  position: relative;
+  max-height: 260px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.newsrow {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.newsdiv .readMore {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  margin: 0;
+  padding: 30px 0 0 0; 
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgba(255, 255, 255, 0)),
+    color-stop(0.95, rgba(255, 255, 255, 90)));
+}

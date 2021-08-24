@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  /*font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;*/
+}
+
+/* Style the body */
+body {
+  font-family: Cambria;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 1300px;
+  margin: auto;
+  box-shadow: 6px 6px 6px #999;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background: #1abc9c;*/
+  /*background: #004997;*/
+  background-color: #004997; /* Used if the image is unavailable */
+  height: 280px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  color: white;
+  text-shadow: 4px 4px #333;
+  
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 80px;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+.main li {
+  margin-bottom: 5px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+  max-width: 260px;
+  background-color: #f1f1f1;
+  padding: 20px 30px 20px 30px;
+}
+
+.side .photo {
+  width: 200px;
+  box-shadow: 6px 6px 6px #999;
+  border-radius: 100px;
+  margin-top: 24px;
+  margin-bottom: 1em;
+}
+
+.side a {
+  color: #000;
+  text-decoration: none;
+}
+
+.side a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.side a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* Main column */
+.main {   
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 1040px;
+  background-color: white;
+  padding: 20px 35px 20px 35px;
+  /*border-right: 1px solid #f1f1f1;*/
+}
+
+.main a {
+  color: #0563c1;
+  text-decoration: none;
+}
+
+.main a:hover {
+  color: #2389d7;
+  text-decoration: underline;
+}
+
+.main a:visited {
+  color: #0563c1;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Responsive layout - when the screen is less than 900px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+  .row {   
+    flex-direction: column;
+  }
+  .side {
+    max-width: 900px;
+    max-height: 400px;
+  }
+  .side .photo { 
+    float: left;
+    margin-left: 0px;
+    margin-right: 40px;
+  }
+  .header h1 {
+    font-size: 60px;
+  }
+  .side a {
+    margin-left: 0px;
+  }
+  .side img {
+    margin-left: 10px;
+  }
+  .newsimg img {
+    width: 200px;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.cvitem {
+  padding: 10px 10px 0px 0px;
+  font-weight: bold;
+}
+
+.cvitemsolo {
+  padding: 10px 10px 0px 0px;
+  font-weight: bold;
+}
+
+.cvexplanation {
+  padding: 0px 10px 0px 0px;
+}
+
+.cvtitle {
+  color: #004997;
+  border-bottom: 2px solid #004997;
+  padding: 20px 0px 0px 0px;
+  font-variant: small-caps;
+  font-size: 24px;
+}
+
+.sectiontitle {
+  color: #004997;
+  border-bottom: 2px solid #004997;
+  padding: 20px 0px 0px 0px;
+  font-variant: small-caps;
+  font-size: 24px;
+  width: 100%;
+}
+
+.newstitle {
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+}
+
+.newsimg {
+  vertical-align: top;
+  padding-right: 20px;
+}
+
+.newsimg img {
+  padding: 12px;
+  border: 0px solid #999;
+  z-index: -1;
+}
+
+.newsparagraph {
+  text-align: justify;
+  margin-top: 5px;
+}
+
+.newsparagraph ul {
+  
+}
+
+.newstable {
+  margin: 1em 0em 0em 0em;
+}
