@@ -157,6 +157,7 @@ ul {
 
 .menu-toggle {
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .menu-toggle img {
