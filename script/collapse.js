@@ -37,7 +37,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-/* Execute once to hide everything */
+/* Execute once to hide menu */
 menuitems = document.getElementsByClassName("menu-toggle")[0].parentNode.children;
 for (j = 1; j < menuitems.length; j++) {
   if (!menuitems[j].style) {continue}
