@@ -174,8 +174,8 @@ ul {
   margin-bottom: 20px;
 }
 
-/* Responsive layout - when the screen is less than 900px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 900px) {
+/* Responsive layout - when the screen is less than 768px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
   .row {   
     flex-direction: column;
   }
@@ -213,6 +213,10 @@ ul {
   .navbar.small a {
     float: none;
     width: 100%;
+  }
+  .side .photo {
+    width: 40%;
+    max-width: 200px;
   }
 }
 
