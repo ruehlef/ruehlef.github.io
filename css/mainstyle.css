@@ -247,14 +247,15 @@ ul {
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 630px) {
+  .side .photo {
+    float: none;
+  }  
   .side .info {
-    float: left;
-    clear: both;
+    float: none;
   }
   .side .media {
-    clear: both;
-    float: left;
+    float: none;
   }
 }
 
