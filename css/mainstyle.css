@@ -196,7 +196,6 @@ ul {
   }
   .side {
     max-width: 768px;
-    max-height: fit-content(400px);
     margin-bottom: 0px;
     padding-bottom: 0px;
   }
