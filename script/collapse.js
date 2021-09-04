@@ -1,11 +1,13 @@
 /* code for talks */
 var coll = document.getElementsByClassName("collapsible");
 var i;
+var j;
+var content;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
+    content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
@@ -17,6 +19,33 @@ for (i = 0; i < coll.length; i++) {
 if (coll != null && coll.length > 0) {
   coll[0].classList.toggle("active")
   coll[0].nextElementSibling.style.maxHeight = coll[0].nextElementSibling.scrollHeight + "px"
+}
+
+/* code for small menu */
+coll = document.getElementsByClassName("menu-toggle");
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    var menuitems = this.parentNode.children;
+    for (j = 1; j < menuitems.length; j++) {
+      if (!menuitems[j].style) {continue}
+      if (menuitems[j].style.display == "none") {
+        menuitems[j].style.display = "";
+      } else {
+        menuitems[j].style.display = "none";
+      }
+    }
+  });
+}
+
+/* Execute once to hide everything */
+menuitems = document.getElementsByClassName("menu-toggle")[0].parentNode.children;
+for (j = 1; j < menuitems.length; j++) {
+  if (!menuitems[j].style) {continue}
+  if (menuitems[j].style.display == "none") {
+    menuitems[j].style.display = "";
+  } else {
+    menuitems[j].style.display = "none";
+  }
 }
 
 /* code for news */
