@@ -197,6 +197,8 @@ ul {
   .side {
     max-width: 768px;
     max-height: fit-content(400px);
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
   .header h1 {
     font-size: 60px;
@@ -224,22 +226,22 @@ ul {
     float: none;
     width: 100%;
   }
-  .side {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  }
   .side .photo {
     float: left;
     margin-left: 0px;
+    margin-top: 0px;
     margin-right: 40px;
     width: 30%
     max-width: 400px;
   }
   .side .info {
-    padding-top: 24px;
   }
   .side .media {
     padding-top: 5px;
+  }
+  .side .sectiontitle {
+     padding-top: 0px;
+     margin-bottom: 20px;
   }
   body {
     line-height: 1.2;
