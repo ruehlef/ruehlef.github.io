@@ -155,6 +155,15 @@ ul {
   text-decoration: none;
 }
 
+.menu-toggle {
+  margin-left: 20px;
+}
+
+.menu-toggle img {
+  padding-top: 7px;
+  padding-bottom: 2px;
+  height: 30px;
+}
 
 /* Main column */
 .main {   
@@ -319,4 +328,10 @@ ul {
 
 .newstable {
   margin: 1em 0em 0em 0em;
+}
+
+@media screen and (max-width: 400px) {
+  .newsimg {
+    float: none;
+  }
 }
