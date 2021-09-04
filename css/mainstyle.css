@@ -247,6 +247,17 @@ ul {
   }
 }
 
+@media screen and (max-width: 430px) {
+  .side .info {
+    float: left;
+    clear: both;
+  }
+  .side .media {
+    clear: both;
+    float: left;
+  }
+}
+
 .cvitem {
   padding: 10px 10px 0px 0px;
   font-weight: bold;
