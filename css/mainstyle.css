@@ -180,8 +180,8 @@ ul {
     flex-direction: column;
   }
   .side {
-    max-width: 900px;
-    max-height: 400px;
+    max-width: 768px;
+    max-height: fit-content(400px);
   }
   .side .photo { 
     float: left;
@@ -214,9 +214,16 @@ ul {
     float: none;
     width: 100%;
   }
+  .side {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
   .side .photo {
     width: 40%;
     max-width: 200px;
+  }
+  body {
+    line-height: 1.2;
   }
 }
 
