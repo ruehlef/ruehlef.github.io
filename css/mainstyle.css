@@ -284,6 +284,7 @@ ul {
 }
 
 .newsimg {
+  float: left;
   vertical-align: top;
   padding-right: 20px;
 }
