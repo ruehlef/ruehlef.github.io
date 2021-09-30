@@ -199,6 +199,32 @@ ul {
   margin-bottom: 20px;
 }
 
+.cvitem {
+  padding: 10px 10px 0px 0px;
+  font-weight: bold;
+}
+
+.cvitemsolo {
+  padding: 10px 10px 0px 0px;
+  font-weight: bold;
+}
+
+.cvexplanation {
+  padding: 0px 10px 0px 0px;
+}
+
+.cvtitle {
+  color: #004997;
+  border-bottom: 2px solid #004997;
+  padding: 20px 0px 0px 0px;
+  font-variant: small-caps;
+  font-size: 24px;
+}
+
+.cvdate {
+  width: 90px;
+}
+
 /* Responsive layout - when the screen is less than 768px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 768px) {
   .row {   
@@ -255,6 +281,9 @@ ul {
   body {
     line-height: 1.2;
   }
+  .cvdate {
+    width: 50px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -267,28 +296,6 @@ ul {
   .side .media {
     float: none;
   }
-}
-
-.cvitem {
-  padding: 10px 10px 0px 0px;
-  font-weight: bold;
-}
-
-.cvitemsolo {
-  padding: 10px 10px 0px 0px;
-  font-weight: bold;
-}
-
-.cvexplanation {
-  padding: 0px 10px 0px 0px;
-}
-
-.cvtitle {
-  color: #004997;
-  border-bottom: 2px solid #004997;
-  padding: 20px 0px 0px 0px;
-  font-variant: small-caps;
-  font-size: 24px;
 }
 
 .sectiontitle {
