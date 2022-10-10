@@ -221,6 +221,13 @@ ul {
   font-size: 24px;
 }
 
+.cvsubsection {
+  color: #004997;
+  padding: 10px 0px 0px 0px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .cvdate {
   width: 90px;
 }
