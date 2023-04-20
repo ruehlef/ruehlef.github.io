@@ -68,27 +68,30 @@
 	    <noscript>Please enable Javascript to display this website properly.<br/></noscript>	
 		
 		<div class="sectiontitle">Latest</div>
-	    <!--###################################################################################################################################################################################################-->
-		<div>
+
+<!--###################################################################################################################################################################################################-->	    
+		<div class="newsdiv">
 		  <table class="newstable">
 			<tr>
 				<td colspan="2">
-					<div class="newstitle">Level Crossings, Attractor Points and Complex Multiplication</div>
-					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2304.00027" target="_blank">[arxiv:2304.00027]</a></div>
+					<div class="newstitle">Searching for ribbons with machine learning</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2304.09304" target="_blank">[arxiv:2304.09304]</a></div>
 				</td>
 			</tr>
 			<tr class="newsrow">
-			<td><div class="newsimg"><p><img src="./img/news/2304.00027-gmoduli.png" alt="moduli space metric" width=240 /></p><p><img src="./img/news/2304.00027-attractorxing.png" alt="Restricted cones" width=240 /></p></div>
+			<td><div class="newsimg"><p><img src="./img/news/2304.09304-ribbon.png" alt="Ribbon" width=240 /></p><p><img src="./img/news/2304.09304-improvement.png" alt="Performance" width=240 /></p></div>
 				<p class="newsparagraph">
-				In a <a href="https://arxiv.org/abs/2103.07472" target="_blank">previous paper</a>, Anthony and I observed that the eigenmodes of the scalar Laplacian run up and down as a function of the shape (complex structure) of the compact extra dimensions of string theory (Calabi-Yau (CY) manifolds). In particular, this means that the eigenvalues cross at some points. This begs the question: <b>What is special about these crossing points?</b><br/>
-				Looking at the equation that defines the CY, the CY metric, or the moduli space metric (see first figure), nothing special seems to be happening when we insert the complex structure values where crossings occur. So we study a simpler CY, the torus. In that case, we actually know everything analytically, and we find that the crossing points can be associated with enhanced symmetries of the torus, which are known as complex multiplication points in algebraic number theory. Fascinatingly, Moore related these points to attractor points, which are specific values of the complex structure related to supersymmetric black holes. We thus speculate that level crossings might be related to these attractor points. If correct, this would be very interesting, since the Black Holes enjoy "protection" by supersymmetry (they are BPS), while the Laplace spectrum is not known to be BPS.<br/>
-				We check the relation between Complex Multiplication, attractor points, and eigenvalue crossings numerically by computing the CY metric and from it the spectrum on the one hand, and solving the attractor flow equations on the other. Our results are consistent with the two appearing at the same point (see second figure). We also discuss how the quality of our numerical spectrum is impacted by the different approximations we need to make along the way.
+				A knot is a closed (knotted) string embedded in a three-dimensional space (a three-sphere, say). As such, it is the boundary of some surface in the three-sphere, see the first figure. If this surface is a disk, the knot is called slice. A closely related object is a ribbon knot: roughly, a knot is ribbon if you can cut it open at two positions and put a band in between the cuts such that you obtain a collection of circles. Every ribbon knot is slice, but it is an open conjecture whether every slice knot is ribbon.<br/>
+				There are topological obstructions that can tell you when a knot is not slice, but no known ones that would tell you when it is slice. Knowing whether a knot is slice is not just important for the aforementioned slice-ribbon-conjecture, but can also be used to construct potential counter-examples to the smooth Poincare conjecture in four dimensions (SPC4).<br/>
+				While this sounds like a binary classification problem that could be tackled with Neural Networks, we actually do not phrase it as such. The reason is that the output of the Neural Network would just give you a certain probability with which it thinks the input was slice, which is not good enough. Instead, we use Reinforcement Learning and Bayesian optimization to obtain a sequence of moves that manipulates the knot until it is manifestly a collection of circles and hence ribbon (and hence slice). By recording the actions, we have a verifiable truth certificate that a given knot actually was slice - established with 100% certainty from ML.<br/> 
+				We rule out thousands of proposed counter-examples to SPC4 (leaving only 2) and establish ribbonness for new knots. The code can operate on very large knots and often establishes ribbonness in seconds (see second figure). It is available on my <a href="https://github.com/ruehlef/ribbon">Github page</a>. 
 				</p>
 			</td>
 			</tr>
 		  </table>
 	    </div>
-	    <!--###################################################################################################################################################################################################-->
+
+<!--###################################################################################################################################################################################################-->
 	    
 		<div class="sectiontitle">Seminars</div>
 		I am involved in the organization of the following seminars (all times are Eastern time):
