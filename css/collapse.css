@@ -1,4 +1,4 @@
-.collapsible {
+.collapsible, .collapsiblenr {
   background-color: white;
   color: #777;
   cursor: pointer;
@@ -67,4 +67,9 @@
     left bottom,
     color-stop(0, rgba(255, 255, 255, 0)),
     color-stop(0.95, rgba(255, 255, 255, 90)));
+}
+
+#MPLunch, #TheorySeminar {
+  font-weight: bold;
+  font-size: 24px;
 }
