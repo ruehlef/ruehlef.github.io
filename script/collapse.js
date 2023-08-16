@@ -75,9 +75,13 @@ for (i = 0; i < coll.length; i++) {
 }
 
 /* code to make hash work in safari, i.e. jump to correct seminar series */
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 window.onload = function() {
   if(location.hash != "") {
-    await new Promise(r => setTimeout(r, 2000));
+    sleep(2000);
     const element = document.getElementById(location.hash.substring(1));
     element.scrollIntoView(true);
   }
