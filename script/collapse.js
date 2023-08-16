@@ -18,14 +18,18 @@ for (i = 0; i < coll.length; i++) {
 /* expand current year */
 if (coll != null && coll.length > 0) {
   if (window.location.href.includes('seminars.html')){
-	  coll[0].classList.toggle("active")
-	  coll[0].nextElementSibling.style.maxHeight = coll[0].nextElementSibling.scrollHeight + "px"
-	  coll[2].classList.toggle("active")
-	  coll[2].nextElementSibling.style.maxHeight = coll[2].nextElementSibling.scrollHeight + "px"
-	} else {
+    if(location.hash == "#MPLunch" || location.hash == "") {
 	  coll[0].classList.toggle("active")
 	  coll[0].nextElementSibling.style.maxHeight = coll[0].nextElementSibling.scrollHeight + "px"
 	}
+	if(location.hash == "#TheorySeminar" || location.hash == "") {
+	  coll[2].classList.toggle("active")
+	  coll[2].nextElementSibling.style.maxHeight = coll[2].nextElementSibling.scrollHeight + "px"
+	}
+  } else {
+	coll[0].classList.toggle("active")
+	coll[0].nextElementSibling.style.maxHeight = coll[0].nextElementSibling.scrollHeight + "px"
+  }
 }
 
 /* code for small menu */
