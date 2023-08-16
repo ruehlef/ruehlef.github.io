@@ -78,6 +78,6 @@ for (i = 0; i < coll.length; i++) {
 window.onload = function() {
   if(location.hash != "") {
     const element = document.getElementById(location.hash.substring(1));
-    element.scrollIntoView();
+    element.scrollIntoView(true);
   }
 }
