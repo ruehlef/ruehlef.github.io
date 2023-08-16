@@ -4,6 +4,11 @@ var i;
 var j;
 var content;
 
+/* code to make has work in safari */
+if(location.hash != "") {
+	location.href = location.hash;
+}
+
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
