@@ -17,8 +17,15 @@ for (i = 0; i < coll.length; i++) {
 }
 /* expand current year */
 if (coll != null && coll.length > 0) {
-  coll[0].classList.toggle("active")
-  coll[0].nextElementSibling.style.maxHeight = coll[0].nextElementSibling.scrollHeight + "px"
+  if (window.location.href.includes('seminars.html')){
+	  coll[0].classList.toggle("active")
+	  coll[0].nextElementSibling.style.maxHeight = coll[0].nextElementSibling.scrollHeight + "px"
+	  coll[2].classList.toggle("active")
+	  coll[2].nextElementSibling.style.maxHeight = coll[2].nextElementSibling.scrollHeight + "px"
+	} else {
+	  coll[0].classList.toggle("active")
+	  coll[0].nextElementSibling.style.maxHeight = coll[0].nextElementSibling.scrollHeight + "px"
+	}
 }
 
 /* code for small menu */
@@ -48,7 +55,7 @@ for (j = 1; j < menuitems.length; j++) {
   }
 }
 
-/* code for news */
+/* code for research */
 coll = document.querySelectorAll(".newsrow, .readMore")
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
