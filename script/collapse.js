@@ -77,6 +77,7 @@ for (i = 0; i < coll.length; i++) {
 /* code to make hash work in safari, i.e. jump to correct seminar series */
 window.onload = function() {
   if(location.hash != "") {
-	location.href = location.hash;
+    const element = document.getElementById(location.hash);
+    element.scrollIntoView();
   }
 }
