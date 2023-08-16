@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Fabian Ruehle - Interests</title>
+	<title>Fabian Ruehle - Research</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
 	<link rel="stylesheet" href="./css/mainstyle.css">
 	<link rel="stylesheet" href="./css/collapse.css">
+	<script id="MathJax-script" async src="./script/mathjax/tex-chtml.js"></script>
 </head>
 <body>
 
 	<div class="header">
-	  <h1>Fabian Ruehle - Interests</h1>
+	  <h1>Fabian Ruehle - Research</h1>
 	</div>
 
 	<div class="navbar large">
 	  <a href="./index.html">Home</a>
-	  <a href="./research.html" class="active">Interests</a>
+	  <a href="./interests.html">Interests</a>
 	  <a href="./seminars.html">Seminars</a>
 	  <a href="./talks.html">Presentations</a>
 	  <a href="./teaching.html">Teaching</a>
-	  <a href="./news.html">Research</a>
+	  <a href="./research.html" class="active">Research</a>
 	  <a href="./cv.html">CV</a>
 	</div>
 	<div class="navbar small">
 	  <div class="menu-toggle"><img src="./icons/menu/menu_icon.png" alt="menu"/></div>
 	  <a href="./index.html">Home</a>
-	  <a href="./research.html" class="active">Interests</a>
+	  <a href="./interests.html">Interests</a>
 	  <a href="./seminars.html">Seminars</a>
 	  <a href="./talks.html">Presentations</a>
 	  <a href="./teaching.html">Teaching</a>
-	  <a href="./news.html">Research</a>
+	  <a href="./research.html" class="active">Research</a>
 	  <a href="./cv.html">CV</a>
 	</div>
 
@@ -67,37 +68,316 @@
 	  
 	  <div class="main">
 	    <noscript>Please enable Javascript to display this website properly.<br/></noscript>
+
+		<!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Searching for ribbons with machine learning</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2304.09304" target="_blank">[arxiv:2304.09304]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2304.09304-ribbon.png" alt="Ribbon" width=240 /></p><p><img src="./img/news/2304.09304-improvement.png" alt="Performance" width=240 /></p></div>
+				<p class="newsparagraph">
+				A knot is a closed (knotted) string embedded in a three-dimensional space (a three-sphere, say). As such, it is the boundary of some surface in the three-sphere, see the first figure. If this surface is a disk, the knot is called slice. A closely related object is a ribbon knot: roughly, a knot is ribbon if you can cut it open at two positions and put a band in between the cuts such that you obtain a collection of circles. Every ribbon knot is slice, but it is an open conjecture whether every slice knot is ribbon.<br/>
+				There are topological obstructions that can tell you when a knot is not slice, but no known ones that would tell you when it is slice. Knowing whether a knot is slice is not just important for the aforementioned slice-ribbon-conjecture, but can also be used to construct potential counter-examples to the smooth Poincare conjecture in four dimensions (SPC4).<br/>
+				While this sounds like a binary classification problem that could be tackled with Neural Networks, we actually do not phrase it as such. The reason is that the output of the Neural Network would just give you a certain probability with which it thinks the input was slice, which is not good enough. Instead, we use Reinforcement Learning and Bayesian optimization to obtain a sequence of moves that manipulates the knot until it is manifestly a collection of circles and hence ribbon (and hence slice). By recording the actions, we have a verifiable truth certificate that a given knot actually was slice - established with 100% certainty from ML.<br/> 
+				We rule out thousands of proposed counter-examples to SPC4 (leaving only 2) and establish ribbonness for new knots. The code can operate on very large knots and often establishes ribbonness in seconds (see second figure). It is available on my <a href="https://github.com/ruehlef/ribbon">Github page</a>. 
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
 	    
-		My main research interest is string theory, but I work on mathematical and computational aspects of physics, theoretical particle physics and cosmology. A summary of my recent publications can be found in the <a href='./news.html'>News section</a>.
-		<div class="sectiontitle">Theoretical particle physics and cosmology</div>
-		<ul>
-			<li>Heterotic / F-Theory / Type II duality</li>
-			<li>Particle Physics from Heterotic String Theory and F-Theory</li>
-			<li>String Cosmology (Inflation, Moduli Stabilization, Dark Matter)</li>
-			<li>Gauged linear sigma models and worldsheet theories</li>
-			<li>SUSY and SUSY breaking</li>
-		</ul>
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Level Crossings, Attractor Points and Complex Multiplication</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2304.00027" target="_blank">[arxiv:2304.00027]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2304.00027-gmoduli.png" alt="moduli space metric" width=240 /></p><p><img src="./img/news/2304.00027-attractorxing.png" alt="Level Crossings" width=240 /></p></div>
+				<p class="newsparagraph">
+				In a <a href="https://arxiv.org/abs/2103.07472" target="_blank">previous paper</a>, Anthony and I observed that the eigenmodes of the scalar Laplacian run up and down as a function of the shape (complex structure) of the compact extra dimensions of string theory (Calabi-Yau (CY) manifolds). In particular, this means that the eigenvalues cross at some points. This begs the question: <b>What is special about these crossing points?</b><br/>
+				Looking at the equation that defines the CY, the CY metric, or the moduli space metric (see first figure), nothing special seems to be happening when we insert the complex structure values where crossings occur. So we study a simpler CY, the torus. In that case, we actually know everything analytically, and we find that the crossing points can be associated with enhanced symmetries of the torus, which are known as complex multiplication points in algebraic number theory. Fascinatingly, Moore related these points to attractor points, which are specific values of the complex structure related to supersymmetric black holes. We thus speculate that level crossings might be related to these attractor points. If correct, this would be very interesting, since the Black Holes enjoy "protection" by supersymmetry (they are BPS), while the Laplace spectrum is not known to be BPS.<br/>
+				We check the relation between Complex Multiplication, attractor points, and eigenvalue crossings numerically by computing the CY metric and from it the spectrum on the one hand, and solving the attractor flow equations on the other. Our results are consistent with the two appearing at the same point (see second figure). We also discuss how the quality of our numerical spectrum is impacted by the different approximations we need to make along the way.
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Symmetries of Calabi-Yau Prepotentials with Isomorphic Flops</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2210.09369" target="_blank">[arxiv:2210.09369]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2210.09369-triangle.png" alt="triangle group" width=240 /></p><p><img src="./img/news/2210.09369-cones.png" alt="Restricted cones" width=240 /></p></div>
+				<p class="newsparagraph">
+				In his seminal paper, Coxeter wrote in 1934: "[Take] three vertical mirrors, erected on the sides of an equilateral triangle so as to form a prism, open at the top. A candle placed within this prism gives rise to an unlimited number of images." This was generalized shortly thereafter by Vinberg to the case where the mirrors do not necessarily  form a prism, but more generally a polyhedron or cone. Among cones string theorists deeply care about are Kahler cones and their duals, called Mori cones. We noticed recently that topological transitions across Kahler cone walls of Calabi-Yau (CY) manifolds exist which lead to new CYs that are isomorphic to the old one. The Kahler cone of such a space after the transition is obtained by reflection along the corresponding Kahler cone wall. It is easy to construct spaces with multiple such "reflecting Kahler cone walls", giving rise to infinitely many equivalent (isomorphic) CYs, whose (infinitely many) individual Kahler cone glues to one big Kahler cone, and we explain how to describe them in terms of Coxeter groups. For 3 Kahler cone walls, this is illustrated (on the hyperbolic Poincare Disk) in the figure on the left. <br>
+				Under mirror symmetry, this big cone, consisting of infinitely many Kahler cones, becomes the complex structure moduli space of one single CY, and it is interesting to ask what this infinite reflection symmetry does to this space: it implies that curve classes inside the manifold necessarily need to carry the same number of curves (counted by Gopakumar-Vafa invariants) if they are mapped onto each other by reflections.<br>
+				This leads to very strong vanishing statements: Only curve classes the lie inside the dual of the extended Kahler cone can be non-vanishing (the green dots inside the green cone in the bottom picture). Moreover, this reflection can lead to very special behavior of instanton corrections: after factoring out GV invariants that agree since they correspond to curve classes that are mapped onto one another, the part that is left over arranges to form special functions, among them modular Jacobi Theta functions. We also link the appearance of these modular functions to an elliptic fibration structure of the CY.
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Flops for Complete Intersection Calabi-Yau Threefolds</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2112.12106" target="_blank">[arxiv:2112.12106]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2112.12106-1.png" alt="branched double cover" width=240 /></p><p><img src="./img/news/2112.12106-2.png" alt="GTP formula" width=240 /></p></div>
+				<p class="newsparagraph">
+				We discuss flops in projective Complete Intersection Calabi-Yau manifolds. We explain that there are two different types of flops, whose presence and type can be read off from the GLSM charges. Of course, this can also be used to engineer manifolds that exhibit a certain flop type.
+				<br/>
+				<b>Case 1:</b> A GLSM U(1) charge contains only 0's and 1's. This signals the presence of flops to non-isomorphic manifolds.<br/>
+				<b>Case 2:</b> A GLSM U(1) charge contains a single 2, followed by 0's and 1's. This signals the presence of flops to isomorphic manifolds.<br/>
+				We explain in both cases how to describe the manifold as well as the singular manifold that sits in between two flops. These require moving away from projective CICYs to more general toric models, determinantal varieties (for case 1), or more complicated manifolds (in the second case). As shown in the figure, these are small resolutions of branched double covers of the "base".
+				<br/>
+				We also explain how to describe the flopped divisors (and in fact the isomorphism of the Picard groups) under both types of flops. We also explain how to get the number of contracted curves in the flop from either comparing the Euler characteristic or by using the Giambelli-Thom-Porteous formula (see bottom figure for an example).
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Recent Developments in Line Bundle Cohomology and Applications to String Phenomenology</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2112.12107" target="_blank">[arxiv:2112.12107]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2112.12107.jpg" alt="Extended Kahler cone" width=240 /></p></div>
+				<p class="newsparagraph">
+				This is a conference proceeding to the <a href="https://sites.google.com/view/cim-dialogues/home" target="_blank">Nankai Symposium on Mathematical Dialogues: In celebration of S.S.Chern's 110th anniversary</a>.
+				We review progress in deriving closed-form expressions for line bundle cohomologies and discuss applications to string phenomenology. We also review results from the papers <a href="https://arxiv.org/abs/2104.03325" target="_blank">[2104.03325]</a>, <a href="https://arxiv.org/abs/2108.10323" target="_blank">[2108.10323]</a>, and <a href="https://arxiv.org/abs/2112.12106" target="_blank">[2112.12106]</a> on the structure and properties of the extended Kahler cone of CICY manifolds.
+				<br/>
+				The figure illustrates the structure of the (convex) extended Kahler cone in the case of infinitely many flops. The extended Kahler cone actually has infinitely many subcones, which become, however, smaller and smaller (just in the original coordinate system; their diameter, as measured with the moduli space metric, actually stays the same), such that they cannot be seen in the image.
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Learning Size and Shape of Calabi-Yau Spaces</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2111.01436" target="_blank">[arxiv:2111.01436]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2111.01436-1.png" alt="Sigma loss" width=240 /></p><p><img src="./img/news/2111.01436-2.png" alt="Ricci loss" width=240 /></p></div>
+				<p class="newsparagraph">
+				For the <a href="https://ml4physicalsciences.github.io/2021/" target="_blank">NeurIPS ML and the Physical Sciences workshop</a>, we presented our library <a href="https://github.com/pythoncymetric/cymetric" target="_blank">cymetric</a> to compute Calabi-Yau metrics for any projective complete intersection Calabi-Yau or toric Kreuzer-Skarke Calabi-Yau.
+				We vastly extend to scope by implementing general point sampling methods on the CY with known distributions for any toric or projective ambient space (i.e. for any \(h^{1,1}\)). We also introduce a new architecture, the "Phi Model", which allows to find the Ricci flat metric in a fixed Kahler class.
+				<br/>
+				The code is written in TensorFlow, but we also provide an API for SageMath and for Mathematica. The latter allows to train a NN to approximate the CY metric with just a few lines of Mathematica code and does not require any knowledge of Python. 
+				<br/>
+				We demonstrate the code for a few example Calabi-Yau manifolds (see top figure for how the Monge-Ampere equation gets solved to higher and higher accuracy during training for various CY metric ansatze). The code can compute many quantities related to CY metrics, including the Ricci tensor, the Ricci scalar, and the Kahler potential (in the calse of the Phi Model). The change in the Ricci scalar as a function of the change in the Monge-Ampere equation is plotted in the bottom figure. We see that once the Monge-Ampere equation is solved exactly, the metric is Ricci-flat; this had to happen, since the Calabi-Yau metric is unique, and it is very nice to see this reproduced. Interestingly, the origin is approached along a line.
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Geodesics in the extended Kähler cone of Calabi-Yau threefolds</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2108.10323" target="_blank">[arxiv:2108.10323]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2108.10323-case1.png" alt="Case 1" width=240 /></p><p><img src="./img/news/2108.10323-case2.png" alt="Case 2" width=240 /></p><p><img src="./img/news/2108.10323-case3.png" alt="Case 3" width=240 /></p><p><img src="./img/news/2108.10323-bounce.png" alt="Bounce" width=240 /></p></div>
+				<p class="newsparagraph">
+				We continue our study of the moduli space of a Calabi-Yau (CY) and the topology changes that can occur. We find that as one traverses the moduli space, three things can happen:
+				<br/>
+				<b>Case 1:</b> A curve collapses but the volume of divisors and the CY stays finite (see first picture). This indicates a "flop wall". One can go through this singularity and emerge on the other side in another geometry where the collapsed curve is replaced by another curve.<br/>
+				<b>Case 2:</b> A divisor collapses, but the CY volume stays finite (see second picture). This indicates a somewhat mysterious boundary which we call a Zariski wall. The CY volume stays finite, but one nevertheless does not have a geometric description beyond this wall.<br/>
+				<b>Case 3:</b> The volume of the whole CY collapses (see third picture). This indicates the end of the effective cone. One would need a GLSM or some other description to make sense of string theory beyond this wall.<br/>
+				<br/>
+				For CYs with 2 Kahler parameters in M-Theory, we can solve the geodesics equation of motion analytically (case 3 features every trigonometric function in the book...) in the vector moduli multiplet space of the theory, which essentially means solving the equations along curves of constant overall volume. We find:<br/>
+				<b>Case 1:</b> These are always at finite geodesic distance.<br/>
+				<b>Case 3:</b> These are always at infinite geodesic distance (this is obvious, since the volume of the CY shrinks in case c, but we are moving along curves of constant volume).<br/>
+				<b>Case 2:</b> This is the strangest case. If we wanted to probe what’s beyond the Zariski wall and happily follow our geodesic, we find that the geodesic “bounces off” the Zariski wall and is reflected back into the geometric regime we came from (see fourth picture). And that bounce happens at finite distance. Moreover, this bounce is not benign: the closer we get to the wall, the more the geodesic motion accelerates, reaching infinite speed at the wall. So it crashes into the wall with infinite speed and is re-emitted into the opposite direction, also with infinite speed. Of course our theory is invalidated before reaching infinite speed, and it is suggested that an additional SU(2) theory appears at such walls. Presumably, if we could correctly include the SU(2) vector multiplet, the singularity would be cured, but we don’t attempt this in this paper.<br/>
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
 		
-		<div class="sectiontitle">Mathematics</div>
-		<ul>
-			<li>Algebraic and toric geometry</li>
-			<li>Singularity theory and limiting mixed Hodge structure</li>
-			<li>Group theory</li>
-			<li>Conformal field theory</li>
-			<li>Knot theory</li>
-		</ul>
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">String Pheno 2021</div>
+					<div style="font-size:14px;"><a href="https://indico.cern.ch/e/sp2021" target="_blank">Conference Homepage</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/sp2021.png" alt="stringpheno21" width=240 /></p></div>
+				<p class="newsparagraph">
+				In the week of July 12th to July 16th 2021, Northeastern is hosting the 20th installment of the anual <a href="https://indico.cern.ch/e/sp2021" target="_blank">String Phenomenology conference</a>, the largest conference in this field. Due to the pandemic, the conference takes place virtually. 
+				It covers a range of topics, including 
+				<br/>
+				&bull;&nbsp;&nbsp;&nbsp;Swampland and quantum gravity conjectures<br/>
+			    &bull;&nbsp;&nbsp;&nbsp;Machine learning and AI techniques in string theory<br/>
+				&bull;&nbsp;&nbsp;&nbsp;Formal and mathematical aspects of string compactifications<br/>
+				&bull;&nbsp;&nbsp;&nbsp;String model building in particle physics and cosmology
+				<br/>
+				If you are interested, just <a href="https://indico.cern.ch/event/1034944/registrations/" target="_blank">register</a> to receive Zoom links to the talks.
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">A blood atlas of COVID-19 defines hallmarks of disease severity and specificity</div>
+					<div style="font-size:14px;"><a href="https://www.medrxiv.org/content/10.1101/2021.05.11.21256877v1" target="_blank">[medrxiv]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/Combat-consensus.png" alt="consensus clustering" width=240 /></p><p><img src="./img/news/COMBAT-feature_score.png" alt="feature scores" width=240 /></p></div>
+				<p class="newsparagraph">
+				In a collaboration with biologists, clinicians, and mathematicians, we studied various aspects of COVID19. I used ML to answer two questions:<br/>
+1.) In collaboration with two colleagues from genomic medicine and a radiologist, and one from respiratory immunology, we studied which (combination of) clinical parameters best describes the status of hospitalized covid patients (mild, severe, critical). The analysis was carried out using unsupervised ML tools (k-means consensus clustering). The classification of the health status assigned by medical doctors matched nicely onto the clinical variables, cf. top figure, which shows three clusters for mild, severe, critical identified by the unsupervised ML algorithm. This gave us confidence that we are using the right measure to classify patients.<br/>
+2.) Given the above classification in terms of clinical variables, I used different laboratory data (gained from RNA sequencing, Luminex analysis, Mass Spectrometry, ...) to to identify proteins or genes that lead to severe desease progression in covid patients. For this I first computed principal components and scored them (using feature permutation scoring) based on 20 ML classification algorithms. I then took the best-performing Prinicpal Components and reran the analysis for the proteins/genes that loaded these Components the strongest. A summary of the genes/proteins that were most important in distinguishing mild, severe, and critical patients are given in the bootom figure.<br/>
+Overall, I think this is a great example that demonstrates the power for transfer of knowledge across the field based on the common language of ML.
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Swampland Conjectures and Infinite Flop Chains</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2104.03325" target="_blank">[arxiv:2104.03325]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2104.03325-oscillation.png" alt="equivalent flops" width=240 /></p><p><img src="./img/news/2104.03325-sym_flop_geod.png" alt="inequivalent flops" width=240 /></p></div>
+				<p class="newsparagraph">
+				As you walk through the moduli space of a Calabi-Yau (CY), the CY can change its topology. Very common topological transitions are flops. Flops can lead to new or to equivalent CYs, and there are even cases where infinitely many flops occur. This begs the question:
+				<br/>
+				<i>What happens to the Swampland Distance Conjecture (SDC), i.e. which tower of states becomes light?</i> 
+				<br/>
+				Clearly, for flops to equivalent CYs, the entire spectrum is identical, yet the geodesic distance between equivalent points in different cones is non-zero. In fact, it can be arbitrarily large in the infinite flop case, see top figure (while the figure looks like the cones get smaller and smaller, the moduli space metric behaves such that the distance between the walls of each cone is the same; indeed, we can identify the symmetry that maps all cones onto one another). We argue that in such cases there is a remnant discrete gauged symmetry, inherited from the 11D Poincare symmetry of M-theory, which identifies all K&auml;hler cones. Consequently, the shortest geodesic connecting two equivalent points corresponds to not moving at all. 
+				<br/>
+				So what about the case with inequivalent flops? If there are finitely many, there is a divisor at the boundary of the K&auml;hler cone (denoted by \(D_L\) and \(D_R\) in the bottom figure). Approaching a wall then means that the winding modes on this divisor become light, providing the tower of light states predicted by the SDC.
+				<br/>
+				This resolution is, however, not available if there exist infinitely many flops to inequivalent CYs. In these cases, there is no divisor at the "end" of the K&auml;hler cone, and hence no associated tower can become light. In contrast to infinitely many equivalent CYs, we haven't seen such cases yet, and indeed a conjecture by Kawamata and Morrison says that they cannot occur. Conversely, the SDC applied to infinitely many inequivalent flops implies the Kawamata-Morrison conjecture. I think it's fun to use physics in this way to explore properties of CYs!
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+	    
+	    <!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Moduli-dependent KK towers and the Swampland Distance Conjecture on the Quintic</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2103.07472" target="_blank">[arxiv:2103.07472]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2103.07472-metric.png" alt="metric" width=240 /></p><p><img src="./img/news/2103.07472-spectrum.png" alt="spectrum" width=240 /></p></div>
+				<p class="newsparagraph">
+				Take for example the Klein-Gordon equation \(g^{ab}\partial_a\partial_b \varphi = m^2\varphi\).
+				We see that the massive spectrum depends on the metric. 
+				We can compute moduli-dependent Calabi-Yau metrics, and hence we can 
+				compute (moduli-dependent) massive KK states on Calabi-Yau manifolds. 
+				The swampland distance conjecture tells us that this KK tower should 
+				become exponentially light when moving \(O(1)\) distance (in Planck units) 
+				in moduli space (see top image). In this paper, we compute geodesics in moduli space to 
+				see what it means to move \(O(1)\) in terms of the parameters that describe
+				the CY. 
+				<br/>
+				For K&auml;hler moduli, it means that the numerical value of the K&auml;hler 
+				parameters \(t_i\) changes indeed by \(O(1)\). For complex structure 
+				moduli \(\psi\), it means that the numerical value changes by \(O(1000)\). 
+				This is clear from mirror symmetry, since \(t=\log\psi\).
+				<br/>
+				We then compute the massive eigenmodes of the CY Laplacian as we vary the
+				moduli and find that states become light as \(m_\text{KK} \sim e^{-0.45 d}\), 
+				where \(d\) is the distance in moduli space, so one can move 2-3 Planck 
+				units before the KK tower comes down one e-fold. I think this is the first 
+				and only way of determining this constant (for finite distance). This 
+				confirms the SDC on this manifold, but also shows that moving a few Planck 
+				units can be feasible. 
+				<br/>
+				Finally, we observe a curious pattern in the eigenmodes: They exhibit level 
+				crossing, and eigenmodes that transform in larger irreps of the CY symmetry 
+				group become heavier, while those in small irreps become lighter (see bottom image). 
+				We have no understanding of this phenomenon. If you do, please tell us!
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
 		
-		<div class="sectiontitle">Data science and computational physics</div>
-		<ul>
-			<li>Machine learning</li>
-			<li>Genetic algorithms</li>
-			<li>Persistent homology</li>
-			<li>Commutative algebra and computational algebraic geometry</li>
-		</ul>
 	  </div>
 	</div>
-
-	<script src="./script/collapse.js"></script>
+	
+    <script src="./script/collapse.js"></script>
 	<div class="footer">
 	&#169; Fabian Ruehle  
 	</div>
