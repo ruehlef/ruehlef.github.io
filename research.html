@@ -69,6 +69,28 @@
 	  <div class="main">
 	    <noscript>Please enable Javascript to display this website properly.<br/></noscript>
 
+<!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Metric Flows with Neural Networks</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2310.19870" target="_blank">[arxiv:2310.19870]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2310.19870-flows.png" alt="Flows" width=240 /></p><p><img src="./img/news/2310.19870-generalization.png" alt="Performance" width=240 /></p></div>
+				<p class="newsparagraph">
+				We consider metric flows, which means that the metric on some space changes dynamically following its equations of motion. Mathematicians have studied such flows extensively, i.e., the metric changes proportional to the gradient of some action or energy functional. The perhaps best-known flow is Perelman's Ricci flow, which he used to prove the 3D Poincare conjecture, but other flows exist such as the Mabuchi flow or the Calabi-flow for Kähler metrics.<br/>
+When Neural Networks (NNs) learn Calabi-Yau metrics, they also flow to the target metric following gradient descend of an underlying loss functional. While these flows are quite complicated for "usual" NNs, they surprisingly become very simple for "infinitely large" neural networks.<br/>
+We discuss how flows like the Ricci flow can be obtained as a special case of NN metric flows, which require a specific architecture and using the Perelman energy functional for the NN loss functional (see figure for a summary of these flows). In practice, we find that infinitely wide NNs (or other kernel methods we study) do not outperform finite NNs, hinting at the importance of the NN being able to learn a useful embedding of the CY (the inputs to a NN are called features in ML, and in our case the inputs are points on the CY). By definition, feature learning requires the NN to dynamically adapt to the input features, while infinitely wide NNs (or other static kernels) use the same static, predefined function during the entire training process. Such methods fail to generalize (far) beyond the training set and would require very dense samples of the CY space (see second figure).
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
 		<!--###################################################################################################################################################################################################-->
 		<div class="newsdiv">
 		  <table class="newstable">
