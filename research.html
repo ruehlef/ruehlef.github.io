@@ -69,7 +69,30 @@
 	  <div class="main">
 	    <noscript>Please enable Javascript to display this website properly.<br/></noscript>
 
-<!--###################################################################################################################################################################################################-->
+		<!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Learning Topological Invariance</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2504.12390" target="_blank">[arxiv:2504.12390]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2504.12390_1.png" alt="Contrastive Learning" width=240 /></p><p><img src="./img/news/2504.12390_2.png" alt="Some sampled Knots" width=240 /></p></div>
+				<p class="newsparagraph">
+				Topology is an equivalence relation where two spaces are equivalent if they differ by certain geometric deformations. We explore techniques to train a Neural Network to learn topological invariance, i.e., maps where an entire equivalence class is mapped to the same object, which we choose to be a vector in\(\mathbb{R}^N\), see Figure. By definition, this vector then corresponds to a topological invariant. We use contrastive learning as well as generative techniques with a transformer to achieve this.<br/>
+				Throughout the paper, we illustrate the process using knot theory. Once we have learned a topologically invariant map from multiple equivalence classes of knots with multiple representatives each to vectors in R^N with a NN, we develop a technique to extract the topological invariant(s) that are computed by the NN: We train smaller NNs (the "student") to reproduce the output of the trained NNs (the "teacher"), but the student gets handed known topological invariants instead of topological spaces. The extent to which the student can learn to reproduce the teacher's invariants from its input quantifies how much of this topological invariance is used by the teacher. By subtracting off the students' embeddings from the teachers' embeddings, we are left with an "irreducible" piece that corresponds to a new invariant.<br/>
+				Finally, we use these techniques to address the Jones Unknot Conjecture, which states that a topological knot invariant called the Jones polynomial is trivial iff the knot from which it is computed is the unknot. We use different sampling techniques to explore the learned embeddings around the unknot, which produce new knots with simple Jones polynomials (see Figure), but we fail to find a conterexample, i.e., a knot that has trivial Jones polynomial but is not the unknot.
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+		<!--###################################################################################################################################################################################################-->
 		<div class="newsdiv">
 		  <table class="newstable">
 			<tr>
@@ -82,9 +105,7 @@
 			<td><div class="newsimg"><p><img src="./img/news/2502.12243_1.png" alt="Prediction of Invariants" width=240 /></p><p><img src="./img/news/2502.12243_2.png" alt="Neural Similarity" width=240 /></p></div>
 				<p class="newsparagraph">
 				Deciding whether two knots are can be smoothly deformed into one another is a central topic of low-dimensional topology. To this end many knot invariants have been proposed based on knot diagrams, geometric, and homological data. Moreover, many different encodings of knots have been used in the literature. In this paper, we ask which knot representations are most beneficial for a neural network to learn which invariants. Conversely, we also study which knot invariants can be learned to which degree.<br/>
-				
 				We find that the diagrammatic invariants as well as the geometric invariants  based on hyperbolic geometry can be learned almost perfectly for most knot representations, while the homological knot invariants are more complicated to lear. In particular, no network (we tried MLPs, CNNs, and transformers) managed to learn predicting the Arf invariant for any representation of the knot. Across invariants, representing knots as braid words allows for the most accurate predictions, while predictions based on representing the knot as a polygonal curve was worst (see top figure), even for invariants that should be computable more efficiently in this representation.<br/>
-				
 				Finally, we propose two neural similarity measures for distinct but mathematically related invariants. One is based on a cosine similarity score of the gradient saliency vectors of different networks, and the other is based on studying jointly misclassified knots across networks for different knot invariants (see bottom figure).
 				</p>
 			</td>
@@ -94,7 +115,7 @@
 	    </div><hr/>	
 	    <!--###################################################################################################################################################################################################-->
 
-<!--###################################################################################################################################################################################################-->
+		<!--###################################################################################################################################################################################################-->
 		<div class="newsdiv">
 		  <table class="newstable">
 			<tr>
@@ -107,9 +128,7 @@
 			<td><div class="newsimg"><p><img src="./img/news/2502.11774.png" alt="KAN Decision Boundary" width=240 /></p></div>
 				<p class="newsparagraph">
 				We study Kronecker coefficients which appear in the decomposition of representations of the symmetric group \(S_N\). These combinatorial objects are interesting from a computational complexity perspective: While determining whether the Littlewood–Richardson coefficients for \(GL_N(\mathbb{C})\) are vanishing is in P, the problem is NP hard for Kronecker coefficients.<br/> 
-				
 				By using interpretable machine learning techniques, such as PCA, gradient saliency analysis of small neural networks, and Kolmogorov-Arnold Networks (KAN), we identify a sufficient criterion for when the Kronecker coefficients are non-vanishing. The KAN analysis reveals that around 80 percent of the coefficients can be classified correctly if we take the mean of the b-loadings (defined in <a href="https://arxiv.org/abs/2310.17906">[2310.17906]</a>) as a decision boundary, see figure.<br/> 
-				
 				Finally, we set up a transformer network that can predict whether the Kronecker coefficients are vanishing with above 99 percent accuracy. This could be taken as an indication that while the problem is NP-hard, the vanishing of most Kronecker coefficients is actually easy to decide, and that there exists a very accurate algorithm for the problem.
 				</p>
 			</td>
@@ -120,7 +139,7 @@
 	    <!--###################################################################################################################################################################################################-->
 	    
 
-<!--###################################################################################################################################################################################################-->
+		<!--###################################################################################################################################################################################################-->
 		<div class="newsdiv">
 		  <table class="newstable">
 			<tr>
@@ -132,11 +151,9 @@
 			<tr class="newsrow">
 			<td>
 				<p class="newsparagraph">
-				The datasets commonly used to train and test AI-based mathematical assistants—such as large language models—have significant limitations. Most notably, they tend to focus on relatively simple mathematics, rarely going beyond lower undergraduate-level content. They also rely on rigid evaluation methods, like binary correctness checks, which are insufficient for assessing AI capabilities in proof-based reasoning.
-
-We analyze these shortcomings in detail and argue that improving AI-powered mathematical assistants requires a fundamental shift in how mathematical datasets are designed and evaluated. Instead of focusing only on theorem-proof pairs, datasets should capture the broader workflow of mathematical research, i.e., the step-by-step, often field-specific reasoning processes that lead to new discoveries. These workflows are crucial for proof discovery but are largely absent from existing datasets.
-
-To address this, we highlight the importance of motivated proof, a concept introduced by Pólya in 1949, which provides a more structured way to guide AI through the reasoning process. We also propose a new standard for documenting mathematical datasets: math datasheets. These datasheets, inspired by general-purpose dataset documentation, include a targeted questionnaire that helps dataset creators identify potential weaknesses in their datasets while making it easier for users to assess their suitability for training and evaluating mathematical AI assistants.
+				The datasets commonly used to train and test AI-based mathematical assistants—such as large language models—have significant limitations. Most notably, they tend to focus on relatively simple mathematics, rarely going beyond lower undergraduate-level content. They also rely on rigid evaluation methods, like binary correctness checks, which are insufficient for assessing AI capabilities in proof-based reasoning.<br/> 
+				We analyze these shortcomings in detail and argue that improving AI-powered mathematical assistants requires a fundamental shift in how mathematical datasets are designed and evaluated. Instead of focusing only on theorem-proof pairs, datasets should capture the broader workflow of mathematical research, i.e., the step-by-step, often field-specific reasoning processes that lead to new discoveries. These workflows are crucial for proof discovery but are largely absent from existing datasets.<br/>
+				To address this, we highlight the importance of motivated proof, a concept introduced by Pólya in 1949, which provides a more structured way to guide AI through the reasoning process. We also propose a new standard for documenting mathematical datasets: math datasheets. These datasheets, inspired by general-purpose dataset documentation, include a targeted questionnaire that helps dataset creators identify potential weaknesses in their datasets while making it easier for users to assess their suitability for training and evaluating mathematical AI assistants.
 				</p>
 			</td>
 			</tr>
@@ -146,7 +163,7 @@ To address this, we highlight the importance of motivated proof, a concept intro
 	    <!--###################################################################################################################################################################################################-->
 	    
 
-<!--###################################################################################################################################################################################################-->
+		<!--###################################################################################################################################################################################################-->
 		<div class="newsdiv">
 		  <table class="newstable">
 			<tr>
@@ -159,10 +176,8 @@ To address this, we highlight the importance of motivated proof, a concept intro
 			<td><div class="newsimg"><p><img src="./img/news/2411.05313.png" alt="Duality Network" width=240 /></p></div>
 				<p class="newsparagraph">
 				In this work, we extend the known web of T-dualities among heterotic NS5-brane theories with eight supercharges by introducing new types of twists. These twists involve reordering certain gauge and flavor symmetries, as well as permuting tensor multiplets when compactifying on a circle. To systematically compare different T-dual theories, we identify key properties that remain unchanged under duality—such as the structure of the Coulomb branch, higher-group symmetries, and the ranks of flavor symmetry groups.<br/>
-
-By analyzing these invariants, we establish precise connections between geometric singularities of the compactification space, the number of NS5-branes, and the corresponding flavor symmetry factors. The twisted theories arise naturally from M-theory compactifications on special types of Calabi-Yau threefolds, which have a torus fiber but no section. This perspective allows us to demonstrate dualities between twisted and untwisted theories using M/F-theory duality, where different fibrations of the same geometry correspond to distinct field theories (see figure).<br/>
-
-We also construct new 5D theories, including a novel CHL-like twisted theory where the two M9-branes are identified. By analyzing their invariants, we also determine their dual descriptions. 
+				By analyzing these invariants, we establish precise connections between geometric singularities of the compactification space, the number of NS5-branes, and the corresponding flavor symmetry factors. The twisted theories arise naturally from M-theory compactifications on special types of Calabi-Yau threefolds, which have a torus fiber but no section. This perspective allows us to demonstrate dualities between twisted and untwisted theories using M/F-theory duality, where different fibrations of the same geometry correspond to distinct field theories (see figure).<br/>
+				We also construct new 5D theories, including a novel CHL-like twisted theory where the two M9-branes are identified. By analyzing their invariants, we also determine their dual descriptions. 
 				</p>
 			</td>
 			</tr>
@@ -170,7 +185,7 @@ We also construct new 5D theories, including a novel CHL-like twisted theory whe
 		  <p class="readMore">more...</p>
 	    </div><hr/>	
 	    <!--###################################################################################################################################################################################################-->
-	    
+	    		
 		<!--###################################################################################################################################################################################################-->
 		<div class="newsdiv">
 		  <table class="newstable">
@@ -309,8 +324,7 @@ We also construct new 5D theories, including a novel CHL-like twisted theory whe
 		  <table class="newstable">
 			<tr>
 				<td colspan="2">
-					<div class="newstitle">Rigor with Machine Learning - 
-from Field Theory to the Poincare Conjecture</div>
+					<div class="newstitle">Rigor with Machine Learning - from Field Theory to the Poincare Conjecture</div>
 					<div style="font-size:14px;"><a href="https://www.nature.com/articles/s42254-024-00709-0" target="_blank">[Nature Reviews Physics]</a></div>
 				</td>
 			</tr>
@@ -363,8 +377,8 @@ from Field Theory to the Poincare Conjecture</div>
 			<td><div class="newsimg"><p><img src="./img/news/2310.19870-flows.png" alt="Flows" width=240 /></p><p><img src="./img/news/2310.19870-generalization.png" alt="Performance" width=240 /></p></div>
 				<p class="newsparagraph">
 				We consider metric flows, which means that the metric on some space changes dynamically following its equations of motion. Mathematicians have studied such flows extensively, i.e., the metric changes proportional to the gradient of some action or energy functional. The perhaps best-known flow is Perelman's Ricci flow, which he used to prove the 3D Poincare conjecture, but other flows exist such as the Mabuchi flow or the Calabi-flow for Kähler metrics.<br/>
-When Neural Networks (NNs) learn Calabi-Yau metrics, they also flow to the target metric following gradient descend of an underlying loss functional. While these flows are quite complicated for "usual" NNs, they surprisingly become very simple for "infinitely large" neural networks.<br/>
-We discuss how flows like the Ricci flow can be obtained as a special case of NN metric flows, which require a specific architecture and using the Perelman energy functional for the NN loss functional (see figure for a summary of these flows). In practice, we find that infinitely wide NNs (or other kernel methods we study) do not outperform finite NNs, hinting at the importance of the NN being able to learn a useful embedding of the CY (the inputs to a NN are called features in ML, and in our case the inputs are points on the CY). By definition, feature learning requires the NN to dynamically adapt to the input features, while infinitely wide NNs (or other static kernels) use the same static, predefined function during the entire training process. Such methods fail to generalize (far) beyond the training set and would require very dense samples of the CY space (see second figure).
+				When Neural Networks (NNs) learn Calabi-Yau metrics, they also flow to the target metric following gradient descend of an underlying loss functional. While these flows are quite complicated for "usual" NNs, they surprisingly become very simple for "infinitely large" neural networks.<br/>
+				We discuss how flows like the Ricci flow can be obtained as a special case of NN metric flows, which require a specific architecture and using the Perelman energy functional for the NN loss functional (see figure for a summary of these flows). In practice, we find that infinitely wide NNs (or other kernel methods we study) do not outperform finite NNs, hinting at the importance of the NN being able to learn a useful embedding of the CY (the inputs to a NN are called features in ML, and in our case the inputs are points on the CY). By definition, feature learning requires the NN to dynamically adapt to the input features, while infinitely wide NNs (or other static kernels) use the same static, predefined function during the entire training process. Such methods fail to generalize (far) beyond the training set and would require very dense samples of the CY space (see second figure).
 				</p>
 			</td>
 			</tr>
@@ -591,9 +605,9 @@ We discuss how flows like the Ricci flow can be obtained as a special case of NN
 			<td><div class="newsimg"><p><img src="./img/news/Combat-consensus.png" alt="consensus clustering" width=240 /></p><p><img src="./img/news/COMBAT-feature_score.png" alt="feature scores" width=240 /></p></div>
 				<p class="newsparagraph">
 				In a collaboration with biologists, clinicians, and mathematicians, we studied various aspects of COVID19. I used ML to answer two questions:<br/>
-1.) In collaboration with two colleagues from genomic medicine and a radiologist, and one from respiratory immunology, we studied which (combination of) clinical parameters best describes the status of hospitalized covid patients (mild, severe, critical). The analysis was carried out using unsupervised ML tools (k-means consensus clustering). The classification of the health status assigned by medical doctors matched nicely onto the clinical variables, cf. top figure, which shows three clusters for mild, severe, critical identified by the unsupervised ML algorithm. This gave us confidence that we are using the right measure to classify patients.<br/>
-2.) Given the above classification in terms of clinical variables, I used different laboratory data (gained from RNA sequencing, Luminex analysis, Mass Spectrometry, ...) to to identify proteins or genes that lead to severe desease progression in covid patients. For this I first computed principal components and scored them (using feature permutation scoring) based on 20 ML classification algorithms. I then took the best-performing Prinicpal Components and reran the analysis for the proteins/genes that loaded these Components the strongest. A summary of the genes/proteins that were most important in distinguishing mild, severe, and critical patients are given in the bootom figure.<br/>
-Overall, I think this is a great example that demonstrates the power for transfer of knowledge across the field based on the common language of ML.
+				1.) In collaboration with two colleagues from genomic medicine and a radiologist, and one from respiratory immunology, we studied which (combination of) clinical parameters best describes the status of hospitalized covid patients (mild, severe, critical). The analysis was carried out using unsupervised ML tools (k-means consensus clustering). The classification of the health status assigned by medical doctors matched nicely onto the clinical variables, cf. top figure, which shows three clusters for mild, severe, critical identified by the unsupervised ML algorithm. This gave us confidence that we are using the right measure to classify patients.<br/>
+				2.) Given the above classification in terms of clinical variables, I used different laboratory data (gained from RNA sequencing, Luminex analysis, Mass Spectrometry, ...) to to identify proteins or genes that lead to severe desease progression in covid patients. For this I first computed principal components and scored them (using feature permutation scoring) based on 20 ML classification algorithms. I then took the best-performing Prinicpal Components and reran the analysis for the proteins/genes that loaded these Components the strongest. A summary of the genes/proteins that were most important in distinguishing mild, severe, and critical patients are given in the bootom figure.<br/>
+				Overall, I think this is a great example that demonstrates the power for transfer of knowledge across the field based on the common language of ML.
 			</td>
 			</tr>
 		  </table>
@@ -642,33 +656,10 @@ Overall, I think this is a great example that demonstrates the power for transfe
 			<tr class="newsrow">
 			<td><div class="newsimg"><p><img src="./img/news/2103.07472-metric.png" alt="metric" width=240 /></p><p><img src="./img/news/2103.07472-spectrum.png" alt="spectrum" width=240 /></p></div>
 				<p class="newsparagraph">
-				Take for example the Klein-Gordon equation \(g^{ab}\partial_a\partial_b \varphi = m^2\varphi\).
-				We see that the massive spectrum depends on the metric. 
-				We can compute moduli-dependent Calabi-Yau metrics, and hence we can 
-				compute (moduli-dependent) massive KK states on Calabi-Yau manifolds. 
-				The swampland distance conjecture tells us that this KK tower should 
-				become exponentially light when moving \(O(1)\) distance (in Planck units) 
-				in moduli space (see top image). In this paper, we compute geodesics in moduli space to 
-				see what it means to move \(O(1)\) in terms of the parameters that describe
-				the CY. 
-				<br/>
-				For K&auml;hler moduli, it means that the numerical value of the K&auml;hler 
-				parameters \(t_i\) changes indeed by \(O(1)\). For complex structure 
-				moduli \(\psi\), it means that the numerical value changes by \(O(1000)\). 
-				This is clear from mirror symmetry, since \(t=\log\psi\).
-				<br/>
-				We then compute the massive eigenmodes of the CY Laplacian as we vary the
-				moduli and find that states become light as \(m_\text{KK} \sim e^{-0.45 d}\), 
-				where \(d\) is the distance in moduli space, so one can move 2-3 Planck 
-				units before the KK tower comes down one e-fold. I think this is the first 
-				and only way of determining this constant (for finite distance). This 
-				confirms the SDC on this manifold, but also shows that moving a few Planck 
-				units can be feasible. 
-				<br/>
-				Finally, we observe a curious pattern in the eigenmodes: They exhibit level 
-				crossing, and eigenmodes that transform in larger irreps of the CY symmetry 
-				group become heavier, while those in small irreps become lighter (see bottom image). 
-				We have no understanding of this phenomenon. If you do, please tell us!
+				Take for example the Klein-Gordon equation \(g^{ab}\partial_a\partial_b \varphi = m^2\varphi\). We see that the massive spectrum depends on the metric. We can compute moduli-dependent Calabi-Yau metrics, and hence we can compute (moduli-dependent) massive KK states on Calabi-Yau manifolds. The swampland distance conjecture tells us that this KK tower should become exponentially light when moving \(O(1)\) distance (in Planck units) in moduli space (see top image). In this paper, we compute geodesics in moduli space to see what it means to move \(O(1)\) in terms of the parameters that describe the CY.<br/>
+				For K&auml;hler moduli, it means that the numerical value of the K&auml;hler parameters \(t_i\) changes indeed by \(O(1)\). For complex structure moduli \(\psi\), it means that the numerical value changes by \(O(1000)\).  This is clear from mirror symmetry, since \(t=\log\psi\).<br/>
+				We then compute the massive eigenmodes of the CY Laplacian as we vary the moduli and find that states become light as \(m_\text{KK} \sim e^{-0.45 d}\), where \(d\) is the distance in moduli space, so one can move 2-3 Planck units before the KK tower comes down one e-fold. I think this is the first and only way of determining this constant (for finite distance). This confirms the SDC on this manifold, but also shows that moving a few Planck units can be feasible. <br/>
+				Finally, we observe a curious pattern in the eigenmodes: They exhibit level crossing, and eigenmodes that transform in larger irreps of the CY symmetry group become heavier, while those in small irreps become lighter (see bottom image). We have no understanding of this phenomenon. If you do, please tell us!
 				</p>
 			</td>
 			</tr>
