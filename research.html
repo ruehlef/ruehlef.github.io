@@ -74,6 +74,31 @@
 		  <table class="newstable">
 			<tr>
 				<td colspan="2">
+					<div class="newstitle">Improving Generative Inverse Design of Rectangular Patch Antennas With Test Time Optimization</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2505.18188" target="_blank">[arxiv:2505.18188]</a></div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2505.18188_1.png" alt="Step 1: Conv VAE for frequency response" width=240 /></p><p><img src="./img/news/2505.18188_2.png" alt="Step 2: Conditional VAE for Antenna Design" width=240 /></p></div>
+				<p class="newsparagraph">
+				Designing antennas for a target frequency response is often tedious: small changes in geometry (e.g. the width or thickness of a patch) can change many aspects of the radio-frequency response at once, so engineers typically need to rely on manual tuning or coarse heuristics.<br/>
+				We propose a two-stage deep-learning framework that automates this “inverse design” process.
+				First, a generative model (a convolutional variational autoencoder) learns a latent representation of antenna frequency-response curves, i.e., it captures how different antenna parameters map to how the antenna behaves in frequency. 
+				Second, conditioned on a desired frequency response, another generative model (a conditional Variational Autoencoder) produces multiple candidate antenna geometries; note that there can be multiple valid designs achieving the same response.<br/>
+				Crucially, at test time (i.e. when you actually want a design for a new specification), we don’t just sample once. Instead, we apply a search/optimization step over the latent space or generated geometries to fine-tune the design so it better matches the target response while also satisfying other criteria such as manufacturability. This yields more accurate and practical designs, even when training data is limited.				
+				</p>
+			</td>
+			</tr>
+		  </table>
+		  <p class="readMore">more...</p>
+	    </div><hr/>	
+	    <!--###################################################################################################################################################################################################-->
+
+		<!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+		  <table class="newstable">
+			<tr>
+				<td colspan="2">
 					<div class="newstitle">Symbolic Regression with Multimodal Large Language Models and Kolmogorov Arnold Networks</div>
 					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2505.07956" target="_blank">[arxiv:2505.07956]</a></div>
 				</td>
