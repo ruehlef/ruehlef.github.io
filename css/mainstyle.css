@@ -350,3 +350,28 @@ ul {
     float: none;
   }
 }
+
+/* For talks map */
+#talkmap {
+    height: 450px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#talk-controls {
+    margin-bottom: 10px;
+    float: left;
+}
+
+#talk-stats {
+    margin-bottom: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    float: left;
+}
+
+.legend {
+    background: white;
+    padding: 10px;
+    line-height: 1.8em;
+}

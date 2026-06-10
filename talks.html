@@ -7,6 +7,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
 	<link rel="stylesheet" href="./css/mainstyle.css">
 	<link rel="stylesheet" href="./css/collapse.css">
+	<!-- For talks map -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
 </head>
 <body>
 
@@ -71,6 +75,20 @@
 	  	<p>
 	  		Here is a collection of talks I have given (click on the year to expand). If you are interested in the slides or recording and can't find them on the respective conference/university/workshop webpage (<a href="https://www.stringwiki.org/wiki/Conferences" target="_blank">stringwiki</a> has a good overview of workshops/conferences and their web pages), please email me. I have collected some recordings of my talks on my <a href="https://www.youtube.com/playlist?list=PLOkmPgSaSBr8EXRd2aUSWuS3J--r2D_7M" target=_blank>YouTube Channel</a>.
 		</p>
+		
+		<h2>Talk Map</h2>
+		<div id="talk-controls">
+		  <label>
+			Year:
+			<select id="yearFilter">
+			  <option value="all">All</option>
+			</select>
+		  </label>
+		</div>
+		<div id="talk-stats"></div>
+		
+		<div id="talkmap"></div>
+
 		<button class="collapsible">2026</button>
 		<div class="content">
 			<div class="talkitem">AI and Mathematics, KIAS, Korea</div>
@@ -571,6 +589,11 @@
 	
 	
     <script src="./script/collapse.js"></script>
+	<!-- For talks map -->
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+	<script src="./script/talks.js"></script>
+	<script src="./script/talkmap.js"></script>
 	<div class="footer">
 	&#169; Fabian Ruehle  
 	</div>

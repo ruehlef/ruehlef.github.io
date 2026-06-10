@@ -1,3 +1,5 @@
 
 img/news/.DS_Store
 .DS_Store
+generate_talk_json.py
+geo_cache.json
