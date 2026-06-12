@@ -71,6 +71,52 @@
 
 		<!--###################################################################################################################################################################################################-->
 		<div class="newsdiv">
+			<table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Kaleidoscopes, Waves and the Prepotential</div>
+					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2606.05280" target="_blank">[arxiv:2606.05280]</a></div>
+				</td>
+			</tr>
+		<tr class="newsrow">
+		<td><div class="newsimg"><p><img src="./img/news/2606.05280-1.png" alt="Caley Graph for Coxeter Group" width=240 /></p><p><img src="./img/news/2606.05280-2.png" alt="FSA for Coxeter Group" width=240 /></p></div>
+		<p class="newsparagraph">
+			This paper is the comprehensive companion to the letter <a href="https://arxiv.org/abs/2604.08725" target="_blank">[arxiv:2604.08725]</a>, containing full proofs, detailed worked examples, a systematic database, and additional results for general Coxeter groups. The starting point is the observation that isomorphic flops in Calabi-Yau threefolds act as reflections on the K&auml;hler moduli space and jointly generate a Coxeter group. As a consequence, the non-perturbative part of the prepotential of the associated 4D &#x1D4A9;=2 Type IIA compactification must organize into Coxeter-invariant functions.<br/>
+			The paper introduces a new <a href="https://www.algarafa.com/cicy-coxeter/" target="_blank">CICY Coxeter Database</a>. The vast majority of the Coxeter groups are the dihedral family I<sub>2</sub>(m), whose Coxeter-invariant orbit sums can be resummed in closed form into modified Bessel functions, ordinary Bessel functions, or Jacobi theta functions. These resummed expressions converge rapidly in the interior of the moduli space, acting as a spectral dual to the standard large-volume instanton expansion, and their geometric origin is explained via harmonic analysis on the Coxeter quotient of the moduli space.<br/>
+			The non-dihedral Coxeter groups can be described as finite-state automata (FSA) that traverse the Cayley graph of a generic Coxeter group without revisiting elements (see figure). The FSA encodes the group structure in a compact finite object, and the instanton orbit sum over the entire group can be expressed through the adjacency matrix of the automaton. This allows resummation within each dihedral channel, yielding special functions such as q-series of false theta functions and reduces the problem of computing Coxeter-invariant prepotential contributions for any Coxeter group to finite linear algebra.
+		</p>
+		</td>
+		</tr>
+		</table>
+		<p class="readMore">more...</p>
+		</div><hr/>
+		<!--###################################################################################################################################################################################################-->
+
+		<!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
+			<table class="newstable">
+			<tr>
+				<td colspan="2">
+					<div class="newstitle">Kolmogorov-Arnold Networks in Industrial Application of Truck Development</div>
+					<div style="font-size:14px;">[in press]</div>
+				</td>
+			</tr>
+			<tr class="newsrow">
+			<td><div class="newsimg"><p><img src="./img/news/2603.TWT-1.png" alt="KAN Neural ODE Truck Model" width=240 /></p><p><img src="./img/news/2603.TWT-2.png" alt="KAN MLP Performance Comparison" width=240 /></p></div>
+				<p class="newsparagraph">
+				Modern high-fidelity simulations of a truck and its drivetrain are accurate but slow: a single 200-second driving scenario takes several hours to compute, making long-distance mission simulations impractical for industrial development workflows. In this paper, a collaboration with TWT GmbH and Daimler Truck AG, we ask whether a surrogate model based on a <a href="https://arxiv.org/abs/2404.19756" target="_blank">Kolmogorov-Arnold Network (KAN)</a> can replace the full physics-based simulation while faithfully reproducing the load time-series needed for strength and durability assessments of electric trucks.<br/>
+				To predict time-series data, we combine KANs with Neural Ordinary Differential Equations (Neural ODEs): rather than mapping inputs directly to outputs, the KAN learns the right-hand side of an ODE for the vehicle velocity, which is then integrated forward in time by a numerical solver. The inputs are motor torques, braking torques, road gradient, and gear-shift signals, and the output is the vehicle speed trajectory. This architecture gives the model a physically motivated inductive bias, since the truck obeys continuous dynamics, and makes the learned function more interpretable than a standard black-box network.<br/>
+				We systematically scan KAN and MLP hyperparameters and compare model size, accuracy, and inference time. The best KAN model achieves roughly 20% better test loss than the best MLP while using far fewer trainable parameters (see figure). The KAN surrogate is then embedded in a co-simulation via the Functional Mockup Interface (FMI) standard, enabling its use across a broad range of industrial CAE workflows. While current KAN implementations are slower at inference than optimized PyTorch MLP code, the accuracy gains make KANs attractive for applications where predictive fidelity matters more than raw speed.
+				</p>
+			</td>
+			</tr>
+			</table>
+			<p class="readMore">more...</p>
+		</div><hr/>
+		<!--###################################################################################################################################################################################################-->
+		
+		<!--###################################################################################################################################################################################################-->
+		<div class="newsdiv">
 		  <table class="newstable">
 			<tr>
 				<td colspan="2">
