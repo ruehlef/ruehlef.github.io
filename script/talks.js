@@ -3,7 +3,7 @@ const talksData = [
     "year": 2026,
     "venue": "AI and Mathematics, KIAS, Korea",
     "title": "ML explorations in low-dimensional topology",
-    "category": "ml",
+    "category": "math",
     "lat": 37.5922,
     "lng": 126.9793
   },
@@ -17,9 +17,17 @@ const talksData = [
   },
   {
     "year": 2026,
+    "venue": "The Unreasonable Effectiveness of Toric Geometry, Vienna, Austria",
+    "title": "Searching for Special Lagrangian cycles in Calabi-Yau Manifolds",
+    "category": "math",
+    "lat": 48.223431,
+    "lng": 16.356422
+  },
+  {
+    "year": 2026,
     "venue": "AIMS Conference 2026, Universit\u00e9 Paris-Est Cr\u00e9teil, France",
     "title": "ML explorations in low-dimensional topology",
-    "category": "ml",
+    "category": "math",
     "lat": 48.7902,
     "lng": 2.4528
   },
