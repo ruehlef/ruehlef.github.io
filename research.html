@@ -74,15 +74,15 @@
 			<table class="newstable">
 			<tr>
 				<td colspan="2">
-					<div class="newstitle"></div>
+					<div class="newstitle">Warped Numerical Calabi-Yau Metrics </div>
 					<div style="font-size:14px;"><a href="https://arxiv.org/abs/2607.18402" target="_blank">[arxiv:2607.18402]</a></div>
 				</td>
 			</tr>
 		<tr class="newsrow">
 		<td><div class="newsimg"><p><img src="./img/news/2607.18402-1.png" alt="Uniform sample on torus" width=240 /></p><p><img src="./img/news/2607.18402-2.png" alt="Two-stage NN training" width=240 /></p></div>
 		<p class="newsparagraph">
-			We use NNs to find backreactions on the CY metric in a Type IIB string theory compactification with fluxes and branes close to a conifold singularity (for pheno reasons). This requires solving a set of coupled PDEs, which we do using NNs: One to approximate the CY metric before back-reaction, one to learn the harmonic representative for the complex structure (2,1)-forms (where harmonic means w.r.t. the CY metric from step one), and then the warp factor which captures the backreaction. We find that for our choice of complex structure and fluxes (close but not exponentially close to the conifold), only less than 1% of the CY (by volume) is in the strongly curved region, and the warp factor is one order of magnitude larger as compared to the smooth case.<br>
-			Along the way, we introduce several tricks and improvements to deal with the nearly-singular CY and which are of independent interest. We use ratios of sections (instead of homogeneous coordinates) as NN inputs as proposed in spectral NNs, we develop a new point sampling method which samples more uniformly with respect to the CY metric (thus also sampling the singular, highly curved region, see Figure), and we introduce multi- NN PDE approximations (following Deepmind's work), where you train a NN approximator for a while, freeze it, and train another one to learn the residuals (see Figure).
+			We use NNs to find backreactions on the CY metric in a Type IIB string theory compactification with fluxes and branes close to a conifold singularity. This requires solving a set of coupled PDEs, which we do using NNs: One to approximate the CY metric before back-reaction, one to learn the harmonic representative for the complex structure (2,1)-forms (where harmonic means w.r.t. the CY metric from step one), and then the warp factor which captures the backreaction. We find that for our choice of complex structure and fluxes (close but not exponentially close to the conifold), only less than 1% of the CY (by volume) is in the strongly curved region, and the warp factor is one order of magnitude larger as compared to the smooth case.<br>
+			Along the way, we introduce several tricks and improvements to deal with the nearly-singular CY and which are of independent interest. We use ratios of sections (instead of homogeneous coordinates) as NN inputs as proposed in spectral NNs, we develop a new point sampling method which samples more uniformly with respect to the CY metric (thus also sampling the singular, highly curved region, see first figure), and we introduce multi- NN PDE approximations (following Deepmind's work), where you train a NN approximator for a while, freeze it, and train another one to learn the residuals (see second figure). Using a second order method (LBFGs) to train did not give any improvements over first order methods (Adam, AdamW, etc.).
 		</p>
 		</td>
 		</tr>
