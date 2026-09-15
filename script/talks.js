@@ -1,6 +1,22 @@
 const talksData = [
   {
     "year": 2026,
+    "venue": "University of Winnipeg, Canada",
+    "title": "Warped Numerical Calabi-Yau Metrics",
+    "category": "string",
+    "lat": 49.8916,
+    "lng": -97.1537
+  },
+  {
+    "year": 2026,
+    "venue": "Actions and Intuition: Algebra via AI, Bonn University, Germany",
+    "title": "Searching for Special Lagrangian cycles in Calabi-Yau Manifolds",
+    "category": "math",
+    "lat": 50.7274,
+    "lng": 7.0869
+  },
+  {
+    "year": 2026,
     "venue": "AI and Mathematics, KIAS, Korea",
     "title": "ML explorations in low-dimensional topology",
     "category": "math",
