@@ -7,9 +7,27 @@ document.addEventListener('DOMContentLoaded', function () {
         maxBoundsViscosity: 1.0
     }).setView([30, 10], 2);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        maxZoom: 18
+    const esriBase = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
+    const esriAttr = 'Tiles &copy; <a href="https://www.esri.com/">Esri</a> &mdash; ' +
+        'Esri, DeLorme, NAVTEQ, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+    // Esri's gray canvas has native tiles only through z16; beyond that Leaflet
+    // upscales them so the cluster spiderfy zoom levels still show a basemap.
+    L.tileLayer(esriBase + '/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: esriAttr,
+        maxZoom: 18,
+        maxNativeZoom: 16
+    }).addTo(map);
+
+    // Place labels ship as a separate overlay: own pane, above tiles, below markers.
+    map.createPane('labels');
+    map.getPane('labels').style.zIndex = 350;
+    map.getPane('labels').style.pointerEvents = 'none';
+
+    L.tileLayer(esriBase + '/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 18,
+        maxNativeZoom: 16,
+        pane: 'labels'
     }).addTo(map);
 
     // ── Icons ─────────────────────────────────────────────────────────────────
